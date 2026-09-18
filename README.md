@@ -53,3 +53,22 @@ Example:
 nLetterWords("ಈ ಪಠ್ಯದಲ್ಲಿ ಪ್ಯಾಲಿಂಡ್ರೋಮ್ ಪದಗಳನ್ನು ಹುಡುಕಿ ತೆಗೆಯುತ್ತದೆ. ನವಜೀವನ ಚಮಚ ಗುಡುಗು ಮಳೆ ಕುಬೇರನಿರಬೇಕು ನವೀನ ಇತ್ಯಾದಿ", 3);
 // Returns ["ಹುಡುಕಿ", "ಚಮಚ", "ಗುಡುಗು", "ನವೀನ", "ಇತ್ಯಾದಿ"]
 ```
+
+## Convert number formats
+
+```js
+toKannadaNumbers(txt);
+toEnglishNumbers(txt);
+```
+
+Examples:
+
+```js
+toKannadaNumbers("2954 x 6816 = 20134464");
+// Returns "೨೯೫೪ x ೬೮೧೬ = ೨೦೧೩೪೪೬೪"
+```
+
+```js
+toEnglishNumbers("೨೯೫೪ x ೬೮೧೬ = ೨೦೧೩೪೪೬೪");
+// Returns "2954 x 6816 = 20134464"
+```
