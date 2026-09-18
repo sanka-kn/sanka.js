@@ -1,0 +1,38 @@
+{
+    "name": "sanka",
+    "version": "0.1.0",
+    "description": "Kannada utilities",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sanka-kn/sanka.js.git"
+    },
+    "author": "Aravinda VK (https://aravindavk.in)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sanka-kn/sanka.js/issues"
+    },
+    "homepage": "https://github.com/sanka-kn/sanka.js",
+    "main": "dist/sanka.cjs.js",
+    "module": "dist/sanka.esm.js",
+    "browser": "dist/sanka.umd.js",
+    "exports": {
+        ".": {
+            "import": "./dist/sanka.esm.js",
+            "require": "./dist/sanka.cjs.js",
+            "browser": "./dist/sanka.umd.js"
+        }
+    },
+    "files": [
+        "dist",
+        "source"
+    ],
+    "scripts": {
+        "build": "rollup -c",
+        "watch": "rollup -c --watch",
+        "test": "node --test"
+    },
+    "devDependencies": {
+        "@rollup/plugin-terser": "^1.0.0",
+        "rollup": "^4.0.0"
+    }
+}
