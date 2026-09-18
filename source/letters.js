@@ -82,7 +82,17 @@ function fisherYatesShuffle(array) {
     return array;
 }
 
-export function shuffle(txt) {
-    const allLetters = letters(txt);
-    return fisherYatesShuffle(allLetters).join("");
+export function shuffle(txt, withinWord) {
+    if (withinWord === undefined || withinWord === false) {
+        const allLetters = letters(txt);
+        return fisherYatesShuffle(allLetters).join("");
+    }
+
+    var words = txt.split(" ");
+    var outWords = [];
+
+    for (var i = 0; i < words.length; i++)
+        outWords.push(shuffle(words[i]));
+
+    return outWords.join(" ");
 }

@@ -79,9 +79,16 @@ Shuffle the given text based on [Fisher Yates Shuffle](https://en.wikipedia.org/
 
 ```js
 shuffle(txt);
+shuffle(txt, withinWord);
 ```
 
 ```js
 shuffle("ಎಲ್ಲರೊಳಗೊಂದಾಗು ಮಂಕುತಿಮ್ಮ");
 // Returned "ಎಮ್ಮಳದಾಕುಲ್ಲರೊ ತಿಗುಗೊಂಮಂ"
+```
+
+```js
+//      txt                     withinWord
+shuffle("ಎಲ್ಲರೊಳಗೊಂದಾಗು ಮಂಕುತಿಮ್ಮ", true);
+// Returned "ಳಎಲ್ಲದಾಗುರೊಗೊಂ ತಿಮಂಕುಮ್ಮ"
 ```
