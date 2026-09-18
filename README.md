@@ -72,3 +72,16 @@ toKannadaNumbers("2954 x 6816 = 20134464");
 toEnglishNumbers("೨೯೫೪ x ೬೮೧೬ = ೨೦೧೩೪೪೬೪");
 // Returns "2954 x 6816 = 20134464"
 ```
+
+## Shuffle
+
+Shuffle the given text based on [Fisher Yates Shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)
+
+```js
+shuffle(txt);
+```
+
+```js
+shuffle("ಎಲ್ಲರೊಳಗೊಂದಾಗು ಮಂಕುತಿಮ್ಮ");
+// Returned "ಎಮ್ಮಳದಾಕುಲ್ಲರೊ ತಿಗುಗೊಂಮಂ"
+```
