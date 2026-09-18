@@ -1,1 +1,1 @@
-export { letters } from "./letters";
+export { letters, isPalindrome, palindromeWords } from "./letters";

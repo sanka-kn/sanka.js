@@ -36,3 +36,23 @@ export function letters(txt) {
     }
     return out;
 };
+
+export function isPalindrome(word) {
+    var l = letters(word);
+    if (l.length == 1) return false;
+
+    var reverseWord = l.toReversed().join("");
+    return word == reverseWord;
+}
+
+export function palindromeWords(txt) {
+    var words = txt.split(" ");
+    var outWords = [];
+
+    for (var i=0; i<words.length; i++) {
+        if (isPalindrome(words[i]))
+            outWords.push(words[i]);
+    }
+
+    return outWords;
+}
