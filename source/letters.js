@@ -56,3 +56,15 @@ export function palindromeWords(txt) {
 
     return outWords;
 }
+
+export function nLetterWords(txt, n) {
+    var words = txt.split(" ");
+    var outWords = [];
+
+    for (var i=0; i<words.length; i++) {
+        if (letters(words[i]).length == n)
+            outWords.push(words[i]);
+    }
+
+    return outWords;
+}
