@@ -46,11 +46,12 @@ export function isPalindrome(word) {
 }
 
 export function palindromeWords(txt) {
-    var words = txt.split(" ");
+    var words = txt.split(/\s+/);
     var outWords = [];
 
     for (var i=0; i<words.length; i++) {
-        if (isPalindrome(words[i]))
+        var word = words[i].replace(".", "").replace(",", "").replace("!", "");
+        if (isPalindrome(word))
             outWords.push(words[i]);
     }
 
@@ -58,11 +59,12 @@ export function palindromeWords(txt) {
 }
 
 export function nLetterWords(txt, n) {
-    var words = txt.split(" ");
+    var words = txt.split(/\s+/);
     var outWords = [];
 
     for (var i=0; i<words.length; i++) {
-        if (letters(words[i]).length == n)
+        var word = words[i].replace(".", "").replace(",", "").replace("!", "");
+        if (letters(word).length == n)
             outWords.push(words[i]);
     }
 
@@ -88,7 +90,7 @@ export function shuffle(txt, withinWord) {
         return fisherYatesShuffle(allLetters).join("");
     }
 
-    var words = txt.split(" ");
+    var words = txt.split(/\s+/);
     var outWords = [];
 
     for (var i = 0; i < words.length; i++)
