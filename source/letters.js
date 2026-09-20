@@ -10,6 +10,8 @@ const uniNoBreakChars = [
     "\u0ccc", "\u0ccd", "\u0c82", "\u0c83", "\u200d"
 ];
 
+const specialChars = /[.,!:;"')(%]/g;
+
 function charHexValue(c) {
     if (c === undefined) return "";
 
@@ -50,7 +52,7 @@ export function palindromeWords(txt) {
     var outWords = [];
 
     for (var i=0; i<words.length; i++) {
-        var word = words[i].replace(".", "").replace(",", "").replace("!", "");
+        var word = words[i].replace(specialChars, "");
         if (isPalindrome(word))
             outWords.push(words[i]);
     }
@@ -63,7 +65,7 @@ export function nLetterWords(txt, n) {
     var outWords = [];
 
     for (var i=0; i<words.length; i++) {
-        var word = words[i].replace(".", "").replace(",", "").replace("!", "");
+        var word = words[i].replace(specialChars, "");
         if (letters(word).length == n)
             outWords.push(words[i]);
     }
